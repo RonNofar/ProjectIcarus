@@ -5,6 +5,8 @@
  *          |_Check for maximumLength raycast 
  *              |_if hits object with tag 'ground'
  *              |_then track length to ground 
+
+    // var localVel = transform.InverseTransformDirection(rigidbody.velocity); // Velocity relative to rigidbody
  */
 
 using UnityEngine;
@@ -14,6 +16,7 @@ public class AlienPickup : MonoBehaviour {
 
     public float maximumLength;
     private float length; // If length(l) to ground(ltg)<maximum length(ml), then l=ml-ltg. Else, l=ml
+    private float radius = 1;
 
     private Transform myTransform;
     private Rigidbody myRigidbody;
@@ -34,7 +37,7 @@ public class AlienPickup : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         UpdateCenter();
-	    Physics.CheckCapsule(center,center+new Vector3(0,length,0),radius)
+        Physics.CheckCapsule(center, center + new Vector3(0, length, 0), radius);
 	}
 
     void UpdateCenter ()

@@ -1757,6 +1757,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29622fbe3405ecd4c84ce0178147b8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  __DEBUG__: 0
+  myCamera: {fileID: 0}
+  cameraThreshhold: 5
+  cameraTurnSpeed: 100
+  momentumCheck: 2
+  frameCheck: 2
 --- !u!114 &1612636042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,6 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b1d0291ca8fd4180fad5d58a69283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maximumLength: 0
 --- !u!1 &1695943028
 GameObject:
   m_ObjectHideFlags: 0
