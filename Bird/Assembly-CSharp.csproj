@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AlienCameraControl.cs" />
+     <Compile Include="Assets\AlienMovement.cs" />
+     <Compile Include="Assets\AlienPickup.cs" />
      <Compile Include="Assets\BirdMoement2.cs" />
      <Compile Include="Assets\BirdMovement.cs" />
      <Compile Include="Assets\BirdMovement3.cs" />
