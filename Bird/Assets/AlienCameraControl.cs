@@ -41,7 +41,7 @@ public class AlienCameraControl : MonoBehaviour {
     {
         myTransform = GetComponent<Transform>();
         myRigidbody = GetComponent<Rigidbody>();
-        cameraTransform = myCamera.GetComponent<Transform>();
+        if (myCamera != null) cameraTransform = myCamera.GetComponent<Transform>();
         UpdatePlayerPosition();
     }
 	

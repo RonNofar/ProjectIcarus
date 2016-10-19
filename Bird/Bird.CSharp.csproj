@@ -76,6 +76,7 @@
     <Compile Include="Assets\BirdMovement.cs" />
     <Compile Include="Assets\BirdMovement3.cs" />
     <Compile Include="Assets\BirdPhysics.cs" />
+    <Compile Include="Assets\GameMaster.cs" />
     <Compile Include="Assets\RotateComponent.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
+    <Compile Include="Assets\UFOMovement.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\Joystick.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\MobileControlRig.cs" />

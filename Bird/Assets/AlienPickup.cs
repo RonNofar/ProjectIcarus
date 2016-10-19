@@ -42,6 +42,6 @@ public class AlienPickup : MonoBehaviour {
 
     void UpdateCenter ()
     {
-        center = myTransform.position;
+        if (myTransform != null) center = myTransform.position;
     }
 }
