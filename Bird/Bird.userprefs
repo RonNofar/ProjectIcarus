@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BirdMoement2.cs">
     <Files>
-      <File FileName="Assets\BirdMovement.cs" Line="28" Column="1" />
+      <File FileName="Assets\UFOContainerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\BirdMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Flying_Tank3.js" Line="1" Column="1" />
-      <File FileName="..\Shooter\Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\BirdMoement2.cs" Line="13" Column="28" />
+      <File FileName="Assets\BirdMoement2.cs" Line="13" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
