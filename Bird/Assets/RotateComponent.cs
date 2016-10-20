@@ -7,6 +7,10 @@ public class RotateComponent : MonoBehaviour {
     private GameObject objectToRotate;
     public float rotationSpeed = 1;
 
+    [SerializeField] private bool XAxis = false;
+    [SerializeField] private bool ZAxis = false;
+    [SerializeField] private bool YAxis = false;
+
     private Transform objectTransform;
 
 	// Use this for initialization
@@ -26,6 +30,8 @@ public class RotateComponent : MonoBehaviour {
 
     void RotateTransform(Transform tran)
     {
-        tran.Rotate(new Vector3(0, rotationSpeed, 0));
+        if (XAxis) tran.Rotate(new Vector3(rotationSpeed, 0, 0));
+        if (ZAxis) tran.Rotate(new Vector3(0, 0, rotationSpeed));
+        if (YAxis) tran.Rotate(new Vector3(0, rotationSpeed, 0));
     }
 }
