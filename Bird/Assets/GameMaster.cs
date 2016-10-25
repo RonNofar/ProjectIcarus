@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
-    public 
+    static public bool isGameStarted = false;
 
 	// Use this for initialization
 	void Start () {

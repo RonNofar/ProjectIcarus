@@ -23,23 +23,24 @@ public class UFOContainerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (myTransform != null && PlayerMaster.isPlayerDead == false) {
+        if (GameMaster.isGameStarted && myTransform != null && PlayerMaster.isPlayerDead == false) {
             // Rotation
             float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
             //myRigidbody.AddTorque(myTransform.right * rotation);
             myTransform.Rotate(myTransform.forward * Time.deltaTime * rotation, Space.World);
-
             // Acceleration
-            accelerationCap = movementSpeed / 2;
-            float MouseY = Input.GetAxis("Mouse Y");
-            Debug.Log(MouseY);
+            if (GameMaster.isGameStarted) {
+                // Acceleration
+                float MouseY = Input.GetAxis("Mouse Y");
+                accelerationCap = movementSpeed / 2;
+                //Debug.Log(MouseY);
+            
+                float acceleration = movementSpeed + MouseY;
+                if (acceleration > movementSpeed + accelerationCap) acceleration = movementSpeed + accelerationCap;
+                else if (acceleration < movementSpeed - accelerationCap) acceleration = movementSpeed - accelerationCap;
 
-            float acceleration = movementSpeed + MouseY;
-            if (acceleration > movementSpeed + accelerationCap) acceleration = movementSpeed + accelerationCap;
-            else if (acceleration < movementSpeed - accelerationCap) acceleration = movementSpeed - accelerationCap;
-
-            myTransform.Translate(Vector3.forward * Time.deltaTime * acceleration);
-
+                myTransform.Translate(Vector3.forward * Time.deltaTime * acceleration);
+            }
 
         }
     }

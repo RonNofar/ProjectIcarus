@@ -30,7 +30,7 @@ public class PlayerMaster : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (isPlayerDead) Explosion(UFOTransform);
-
+        //if (UFOTransform != null) Debug.Log(UFOTransform.) RIGIDBODY
     }
 
     void Explosion (Transform tranLocation) { // handle through a gamemaster NOT playermaster (player master is destoryed before the rest of the code can execute
