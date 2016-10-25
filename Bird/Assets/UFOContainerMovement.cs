@@ -5,6 +5,7 @@ public class UFOContainerMovement : MonoBehaviour {
 
     public float rotationSpeed = 1000;
     public float movementSpeed = 10;
+    public float accelerationCap;
 
     private Transform myTransform;
     private Rigidbody myRigidbody;
@@ -23,11 +24,23 @@ public class UFOContainerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (myTransform != null && PlayerMaster.isPlayerDead == false) {
+            // Rotation
             float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
             //myRigidbody.AddTorque(myTransform.right * rotation);
             myTransform.Rotate(myTransform.forward * Time.deltaTime * rotation, Space.World);
 
-            myTransform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
+            // Acceleration
+            accelerationCap = movementSpeed / 2;
+            float MouseY = Input.GetAxis("Mouse Y");
+            Debug.Log(MouseY);
+
+            float acceleration = movementSpeed + MouseY;
+            if (acceleration > movementSpeed + accelerationCap) acceleration = movementSpeed + accelerationCap;
+            else if (acceleration < movementSpeed - accelerationCap) acceleration = movementSpeed - accelerationCap;
+
+            myTransform.Translate(Vector3.forward * Time.deltaTime * acceleration);
+
+
         }
-	}
+    }
 }
