@@ -22,7 +22,7 @@ public class UFOContainerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (myTransform != null && !PlayerMaster.isPlayerDead) {
+        if (myTransform != null && PlayerMaster.isPlayerDead == false) {
             float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
             //myRigidbody.AddTorque(myTransform.right * rotation);
             myTransform.Rotate(myTransform.forward * Time.deltaTime * rotation, Space.World);

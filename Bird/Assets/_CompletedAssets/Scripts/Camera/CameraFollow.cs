@@ -24,11 +24,14 @@ namespace CompleteProject
 
 
         void FixedUpdate () {
-            // Create a postion the camera is aiming for based on the offset from the target.
-            Vector3 targetCamPos = targetTransform.position + offset;
 
-            // Smoothly interpolate between the camera's current position and it's target position.
-            m_Transform.position = Vector3.Lerp (m_Transform.position, targetCamPos, smoothing * Time.deltaTime);
+            if (targetTransform != null) {
+                // Create a postion the camera is aiming for based on the offset from the target.
+                Vector3 targetCamPos = targetTransform.position + offset;
+
+                // Smoothly interpolate between the camera's current position and it's target position.
+                m_Transform.position = Vector3.Lerp(m_Transform.position, targetCamPos, smoothing * Time.deltaTime);
+            }
         }
     }
 }

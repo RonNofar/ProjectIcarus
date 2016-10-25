@@ -5,13 +5,38 @@ public class PlayerMaster : MonoBehaviour {
 
     static public bool isPlayerDead = false;
 
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private GameObject UFOObject;
+
+    public float explosionDur = 1;
+
+    private Transform UFOTransform;
+
+    private bool deathCheck = false;
+    private float deathTime;
+
 	// Use this for initialization
 	void Start () {
-	
-	}
+        SetInitialReferences();
+
+    }
+
+    void SetInitialReferences() {
+        if (UFOObject != null) UFOTransform = UFOObject.GetComponent<Transform>();
+        else Debug.Log("UFOObject is null");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (isPlayerDead) Explosion(UFOTransform);
+
+    }
+
+    void Explosion (Transform tranLocation) { // handle through a gamemaster NOT playermaster (player master is destoryed before the rest of the code can execute
+        if (!deathCheck) deathTime = Time.time; deathCheck = true;
+        Object exp = Instantiate(explosionPrefab, tranLocation.position, tranLocation.rotation);
+        Destroy(gameObject);
+        if (deathCheck && Time.time>deathTime+explosionDur) Destroy(exp);
+    }
 }
