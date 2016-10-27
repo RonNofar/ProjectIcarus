@@ -34,7 +34,7 @@ public class UFOContainerMovement : MonoBehaviour {
             myTransform.Rotate(myTransform.forward * Time.deltaTime * rotation, Space.World);
 
             // Game starting
-            if (initializingMovement < initializingThreshold) initializingMovement += rotation;
+            if (initializingMovement < initializingThreshold) initializingMovement += Mathf.Abs(rotation);
             else GameMaster.isGameStarted = true;
 
             // Acceleration
