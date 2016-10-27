@@ -10,6 +10,9 @@ public class UFOContainerMovement : MonoBehaviour {
     private Transform myTransform;
     private Rigidbody myRigidbody;
 
+    public float initializingThreshold = 100;
+    private float initializingMovement = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +26,17 @@ public class UFOContainerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GameMaster.isGameStarted && myTransform != null && PlayerMaster.isPlayerDead == false) {
+        if (myTransform != null && PlayerMaster.isPlayerDead == false) {
+
             // Rotation
             float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
             //myRigidbody.AddTorque(myTransform.right * rotation);
             myTransform.Rotate(myTransform.forward * Time.deltaTime * rotation, Space.World);
+
+            // Game starting
+            if (initializingMovement < initializingThreshold) initializingMovement += rotation;
+            else GameMaster.isGameStarted = true;
+
             // Acceleration
             if (GameMaster.isGameStarted) {
                 // Acceleration

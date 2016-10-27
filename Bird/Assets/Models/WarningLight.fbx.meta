@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 51229eaa600aece498d0b806a4a3650a
+timeCreated: 1477541949
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: group
+    100002: group1
+    100004: group2
+    100006: group3
+    100008: group4
+    100010: group5
+    100012: group6
+    100014: pasted__group4
+    100016: pasted__group4 1
+    100018: pasted__pasted__polySurface1
+    100020: pasted__pasted__polySurface1 1
+    100022: pasted__pasted__pSphere1
+    100024: pasted__pasted__pSphere1 1
+    100026: pasted__pasted__transform1
+    100028: pasted__pasted__transform1 1
+    100030: pasted__polySurface1
+    100032: pasted__pPipe1
+    100034: pasted__pSphere1
+    100036: pasted__transform1
+    100038: pCone1
+    100040: polySurface1
+    100042: polySurface2
+    100044: polySurface3
+    100046: polySurface5
+    100048: pPipe1
+    100050: pSphere1
+    100052: transform1
+    100054: transform2
+    100056: //RootNode
+    400000: group
+    400002: group1
+    400004: group2
+    400006: group3
+    400008: group4
+    400010: group5
+    400012: group6
+    400014: pasted__group4
+    400016: pasted__group4 1
+    400018: pasted__pasted__polySurface1
+    400020: pasted__pasted__polySurface1 1
+    400022: pasted__pasted__pSphere1
+    400024: pasted__pasted__pSphere1 1
+    400026: pasted__pasted__transform1
+    400028: pasted__pasted__transform1 1
+    400030: pasted__polySurface1
+    400032: pasted__pPipe1
+    400034: pasted__pSphere1
+    400036: pasted__transform1
+    400038: pCone1
+    400040: polySurface1
+    400042: polySurface2
+    400044: polySurface3
+    400046: polySurface5
+    400048: pPipe1
+    400050: pSphere1
+    400052: transform1
+    400054: transform2
+    400056: //RootNode
+    2300000: pasted__pasted__polySurface1
+    2300002: pasted__pasted__polySurface1 1
+    2300004: pasted__polySurface1
+    2300006: pasted__pPipe1
+    2300008: polySurface1
+    2300010: polySurface2
+    2300012: polySurface3
+    2300014: polySurface5
+    2300016: pPipe1
+    3300000: pasted__pasted__polySurface1
+    3300002: pasted__pasted__polySurface1 1
+    3300004: pasted__polySurface1
+    3300006: pasted__pPipe1
+    3300008: polySurface1
+    3300010: polySurface2
+    3300012: polySurface3
+    3300014: polySurface5
+    3300016: pPipe1
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: pPipe1
+    4300006: pasted__pPipe1
+    4300008: pasted__polySurface1
+    4300010: pasted__pasted__polySurface1
+    4300012: pasted__pasted__polySurface1
+    4300014: polySurface3
+    4300016: polySurface5
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

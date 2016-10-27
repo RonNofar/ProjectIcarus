@@ -338,6 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToRotate: {fileID: 138232}
   rotationSpeed: 1
+  XAxis: 0
+  ZAxis: 0
+  YAxis: 0
 --- !u!124 &12408016
 Behaviour:
   m_ObjectHideFlags: 1
