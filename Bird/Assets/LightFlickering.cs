@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LightFlickering : MonoBehaviour {
+public class LightFlickering : MonoBehaviour { // PLANS FOR FUTURE::: public list of gameobjects to change metarial, public metarial for new one (on light/or off), private curr metarial
 
     public GameObject lightObject;
     public bool isFlickering = true;
     public bool isRandom = true;
-    public float timeOn = 0.1f;
-    public float timeOff = 0.5f;
-    public float minimumTime = 0;
+    public float timeOn = 1;
+    public float timeOff = 3;
+    public float minimumTime = 0.1f;
 
     private Light flickeringLight;
     private float flickerTime = 0;

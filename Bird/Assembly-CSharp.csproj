@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LaserControl.cs" />
+     <Compile Include="Assets\LightFlickering.cs" />
      <Compile Include="Assets\Other\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyHealth.cs" />
@@ -96,6 +98,7 @@
      <Compile Include="Assets\Scripts\UFOCollision.cs" />
      <Compile Include="Assets\Scripts\UFOContainerMovement.cs" />
      <Compile Include="Assets\Scripts\UFOMovement.cs" />
+     <Compile Include="Assets\SwingingDoor.cs" />
      <None Include="Assets\Other\_CompletedAssets\SampleAssets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Other\_CompletedAssets\SampleAssets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
      <None Include="Assets\Other\_CompletedAssets\SampleAssets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
