@@ -13,13 +13,29 @@ public class LightFlickering : MonoBehaviour { // PLANS FOR FUTURE::: public lis
     private Light flickeringLight;
     private float flickerTime = 0;
 
+    public bool isFlickeringMaterials = true;
+    public GameObject[] objectsToFlicker;
+    public Material[] flickerToMaterials;
+    private Material[] originalMaterials;
+    private Renderer[] rendererToFlicker;
+
 	// Use this for initialization
 	void Start () {
         SetInitialReferences();
     }
 
     void SetInitialReferences () {
-        if (lightObject != null) flickeringLight = lightObject.GetComponent<Light>();
+        if (lightObject != null) flickeringLight = lightObject.GetComponent<Light>(); flickeringLight.enabled = true;
+        if (objectsToFlicker != null) {
+            int len = objectsToFlicker.Length;
+            originalMaterials = new Material[len];
+            rendererToFlicker = new Renderer[len];
+            for (int i = 0; i < len; ++i) {
+                rendererToFlicker[i] = objectsToFlicker[i].GetComponent<Renderer>();
+                originalMaterials[i] = rendererToFlicker[i].material;
+
+            }
+        }
     }
 	
 	// Update is called once per frame
@@ -28,10 +44,16 @@ public class LightFlickering : MonoBehaviour { // PLANS FOR FUTURE::: public lis
             if (Time.time > flickerTime) {
                 flickeringLight.enabled = !flickeringLight.enabled;
                 if (flickeringLight.enabled) {
+                    if (isFlickeringMaterials) {
+                        for (int i = 0; i < objectsToFlicker.Length; ++i) rendererToFlicker[i].material = flickerToMaterials[i];
+                    }
                     float on = timeOn;
                     if (isRandom) on = Random.Range(minimumTime, timeOn);
                     flickerTime = Time.time + on;
                 } else {
+                    if (isFlickeringMaterials) {
+                        for (int i = 0; i < objectsToFlicker.Length; ++i) rendererToFlicker[i].material = originalMaterials[i];
+                    }
                     float off = timeOff;
                     if (isRandom) off = Random.Range(minimumTime, timeOff);
                     flickerTime = Time.time + off;
