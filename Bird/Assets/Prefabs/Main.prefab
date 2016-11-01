@@ -471,6 +471,7 @@ MonoBehaviour:
   rotationSpeed: 250
   movementSpeed: 10
   accelerationCap: 0
+  initializingThreshold: 100
 --- !u!124 &12463164
 Behaviour:
   m_ObjectHideFlags: 1

@@ -40,8 +40,8 @@ public class SwingingDoor : MonoBehaviour {
                 lights[i] = lightsObjects[i].GetComponent<Light>();
                 lights[i].enabled = false;
             }
-        } else { Debug.Log("No lightsObjects found."); };
-        if (isNegative) rotationSpeed = -rotationSpeed; rotationFrames = -rotationFrames;
+        } else { Debug.Log("No lightsObjects found."); }
+        if (isNegative) rotationSpeed = -rotationSpeed; //rotationFrames = -rotationFrames;
         if (objectLightGlass != null) {
             objectRenderer = objectLightGlass.GetComponent<Renderer>();
             originalMaterial = objectRenderer.material;
@@ -72,13 +72,18 @@ public class SwingingDoor : MonoBehaviour {
                 rotation = new Vector3(0, 0, rotationSpeed);
             } else Debug.Log("No axis selected.");
 
+            //Debug.Log(rotation);
+            ++totalRotationFrames;
+            if (totalRotationFrames < rotationFrames) doorTransform.Rotate(rotation * Time.deltaTime);
+            else isSwinging = false;
+            /*
             if (!isNegative) {
                 ++totalRotationFrames;
                 if (totalRotationFrames < rotationFrames) doorTransform.Rotate(rotation * Time.deltaTime);
             } else if (isNegative) {
                 --totalRotationFrames;
                 if (totalRotationFrames > rotationFrames) doorTransform.Rotate(rotation * Time.deltaTime);
-            }
+            }*/
         }
 	}
 }
