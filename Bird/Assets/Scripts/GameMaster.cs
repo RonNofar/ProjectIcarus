@@ -12,7 +12,13 @@ public class GameMaster : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.R)) SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
+        if (Input.GetKeyUp(KeyCode.R)) Restart();
 	}
+
+    void Restart () {
+        SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
+        isGameStarted = false;
+        PlayerMaster.isPlayerDead = false;
+    }
 
 }

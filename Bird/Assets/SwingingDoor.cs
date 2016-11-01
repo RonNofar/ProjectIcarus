@@ -71,6 +71,7 @@ public class SwingingDoor : MonoBehaviour {
             } else if (ZAxis) {
                 rotation = new Vector3(0, 0, rotationSpeed);
             } else Debug.Log("No axis selected.");
+
             if (!isNegative) {
                 ++totalRotationFrames;
                 if (totalRotationFrames < rotationFrames) doorTransform.Rotate(rotation * Time.deltaTime);
