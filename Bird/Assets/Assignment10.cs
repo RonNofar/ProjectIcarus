@@ -16,7 +16,7 @@ public class Assignment10 : MonoBehaviour {
         mainPlayer = GameObject.FindWithTag("Player");
         playerMaster = mainPlayer.GetComponentInChildren<PlayerMaster>();
         Debug.Log("DeathCheck: "+playerMaster.getDeathCheck());
-        WaitForSecs(10);
+        StartCoroutine(WaitForSecs(10));
         gameMaster = playerMaster.findGameObjectOfName("MisterMaster");
         GameMaster script = gameMaster.GetComponent<GameMaster>();
         GameObject[] array = script.FindObjectsWithTag("Obstacles");
