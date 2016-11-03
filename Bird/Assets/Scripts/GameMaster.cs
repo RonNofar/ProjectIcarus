@@ -21,4 +21,8 @@ public class GameMaster : MonoBehaviour {
         PlayerMaster.isPlayerDead = false;
     }
 
+    public GameObject[] FindObjectsWithTag ( string tag ) {
+        return GameObject.FindGameObjectsWithTag(tag);
+    }
+
 }

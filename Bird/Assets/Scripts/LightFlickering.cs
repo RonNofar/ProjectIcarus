@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LightFlickering : MonoBehaviour { // PLANS FOR FUTURE::: public list of gameobjects to change metarial, public metarial for new one (on light/or off), private curr metarial
 
+    [AddComponentMenu("Light Scripts")]
+
     public GameObject lightObject;
     public bool isFlickering = true;
     public bool isRandom = true;

@@ -3,12 +3,14 @@ using System.Collections;
 
 public class UFOContainerMovement : MonoBehaviour {
 
+    [AddComponentMenu("UFO Scripts")]
+
     public float rotationSpeed = 1000;
     public float movementSpeed = 10;
     public float accelerationCap;
 
     private Transform myTransform;
-    private Rigidbody myRigidbody;
+    //private Rigidbody myRigidbody;
 
     public float initializingThreshold = 100;
     private float initializingMovement = 0;
@@ -21,7 +23,7 @@ public class UFOContainerMovement : MonoBehaviour {
 
     void SetInitialReferences () {
         myTransform = GetComponent<Transform>();
-        myRigidbody = GetComponent<Rigidbody>();
+        //myRigidbody = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
@@ -54,3 +56,4 @@ public class UFOContainerMovement : MonoBehaviour {
         }
     }
 }
+

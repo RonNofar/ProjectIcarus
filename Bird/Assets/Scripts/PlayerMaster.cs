@@ -39,4 +39,12 @@ public class PlayerMaster : MonoBehaviour {
         Destroy(gameObject);
         if (deathCheck && Time.time>deathTime+explosionDur) Destroy(exp);
     }
+
+    public bool getDeathCheck() {
+        return deathCheck;
+    }
+
+    public GameObject findGameObjectOfName (string name) {
+        return GameObject.Find("MisterMaster");
+    }
 }

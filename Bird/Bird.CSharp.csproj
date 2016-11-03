@@ -69,8 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LaserControl.cs" />
-    <Compile Include="Assets\LightFlickering.cs" />
+    <Compile Include="Assets\Assignment10.cs" />
     <Compile Include="Assets\Other\PorglezompPyroclastics\ExplosionMat.cs" />
     <Compile Include="Assets\Other\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Other\Scripts\Enemy\EnemyHealth.cs" />
@@ -94,7 +93,6 @@
     <Compile Include="Assets\Other\_CompletedAssets\SampleAssets\Effects\ImageEffects\Scripts\TiltShift.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\SampleAssets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Audio\MixLevels.cs" />
-    <Compile Include="Assets\Other\_CompletedAssets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Enemy\EnemyMovement.cs" />
@@ -109,20 +107,23 @@
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\AlienCameraControl.cs" />
-    <Compile Include="Assets\Scripts\AlienMovement.cs" />
-    <Compile Include="Assets\Scripts\AlienPickup.cs" />
-    <Compile Include="Assets\Scripts\BirdMoement2.cs" />
-    <Compile Include="Assets\Scripts\BirdMovement.cs" />
-    <Compile Include="Assets\Scripts\BirdMovement3.cs" />
-    <Compile Include="Assets\Scripts\BirdPhysics.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\LaserControl.cs" />
+    <Compile Include="Assets\Scripts\LightFlickering.cs" />
+    <Compile Include="Assets\Scripts\Old\AlienCameraControl.cs" />
+    <Compile Include="Assets\Scripts\Old\AlienMovement.cs" />
+    <Compile Include="Assets\Scripts\Old\AlienPickup.cs" />
+    <Compile Include="Assets\Scripts\Old\BirdMoement2.cs" />
+    <Compile Include="Assets\Scripts\Old\BirdMovement.cs" />
+    <Compile Include="Assets\Scripts\Old\BirdMovement3.cs" />
+    <Compile Include="Assets\Scripts\Old\BirdPhysics.cs" />
+    <Compile Include="Assets\Scripts\Old\UFOMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMaster.cs" />
     <Compile Include="Assets\Scripts\RotateComponent.cs" />
+    <Compile Include="Assets\Scripts\SwingingDoor.cs" />
     <Compile Include="Assets\Scripts\UFOCollision.cs" />
     <Compile Include="Assets\Scripts\UFOContainerMovement.cs" />
-    <Compile Include="Assets\Scripts\UFOMovement.cs" />
-    <Compile Include="Assets\SwingingDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Other\Fonts\LuckiestGuy\LICENSE.txt" />
