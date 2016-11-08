@@ -50,7 +50,7 @@ public class UFOContainerMovement : MonoBehaviour {
                 if (acceleration > movementSpeed + accelerationCap) acceleration = movementSpeed + accelerationCap;
                 else if (acceleration < movementSpeed - accelerationCap) acceleration = movementSpeed - accelerationCap;
 
-                myTransform.Translate(Vector3.forward * Time.deltaTime * acceleration);
+                myTransform.Translate(myTransform.forward * Time.deltaTime * acceleration);
             }
 
         }
