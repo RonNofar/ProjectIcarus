@@ -13,15 +13,15 @@ public class Assignment10 : MonoBehaviour {
 	}
 
     void SetInitialReferences () {
-        mainPlayer = GameObject.FindWithTag("Player");
+        mainPlayer = GameObject.FindWithTag("Player"); // 4 & 5
         playerMaster = mainPlayer.GetComponentInChildren<PlayerMaster>();
-        Debug.Log("DeathCheck: "+playerMaster.getDeathCheck());
-        StartCoroutine(WaitForSecs(10));
+        Debug.Log("DeathCheck: "+playerMaster.getDeathCheck()); // 1 & 2
+        StartCoroutine(WaitForSecs(10)); // 7
         gameMaster = playerMaster.findGameObjectOfName("MisterMaster");
         GameMaster script = gameMaster.GetComponent<GameMaster>();
         GameObject[] array = script.FindObjectsWithTag("Obstacles");
         foreach (GameObject tagged in array) {
-            Debug.Log("Obstacle: "+tagged.name);
+            Debug.Log("Obstacle: " + tagged.name); // 6
         }
     }
 	
