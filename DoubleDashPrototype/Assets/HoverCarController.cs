@@ -71,9 +71,9 @@ namespace HoverCar
             finTran.rotation = RotationAboutTransform(m_Transform, rot, maxSteerAngle);
         }
 
-        private void RotateCamera (Transform cameraTran, float steer) {
+        public void RotateCamera (Transform cameraTran, float steer) {
             //cameraTran.rotation = Quaternion.Euler(eulerAngles.x, eulerAngles.y + steer * steerRate, eulerAngles.z);
-            cameraTran.rotation = RotationAboutTransform(m_Transform, steerRate, steerRate);
+            cameraTran.rotation = RotationAboutTransform(m_Transform, steer, steerRate);
         }
 
         private Quaternion RotationAboutTransform ( Transform rotateAbout, float rot, float rotRate ) {

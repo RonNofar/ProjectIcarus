@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 
+[ExecuteInEditMode]
 public class ClockAnimator : MonoBehaviour {
 
     enum Hands { Hour, Minute, Second }
