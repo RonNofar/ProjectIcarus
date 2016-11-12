@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Assignment10.cs" />
      <Compile Include="Assets\ClockAnimator.cs" />
+     <Compile Include="Assets\Fractal.cs" />
      <Compile Include="Assets\Other\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyHealth.cs" />
