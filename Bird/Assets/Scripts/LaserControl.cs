@@ -64,7 +64,7 @@ public class LaserControl : MonoBehaviour {
                 } else if (tranPos_curr - movementSpeed < tranPos_start - minThreshold) {
                     movementSpeed = Mathf.Abs(movementSpeed);
                 }
-                laserTransform.Translate(translation);
+                laserTransform.Translate(translation * Time.deltaTime);
             }
         }
 	}

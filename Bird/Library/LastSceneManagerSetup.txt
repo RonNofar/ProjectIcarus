@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/NucleonTest.unity
+- path: Assets/UFOLevelTest.unity
   isLoaded: 1
   isActive: 1

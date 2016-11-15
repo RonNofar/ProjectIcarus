@@ -30,8 +30,8 @@ public class RotateComponent : MonoBehaviour {
 
     void RotateTransform(Transform tran)
     {
-        if (XAxis) tran.Rotate(new Vector3(rotationSpeed, 0, 0));
-        if (ZAxis) tran.Rotate(new Vector3(0, 0, rotationSpeed));
-        if (YAxis) tran.Rotate(new Vector3(0, rotationSpeed, 0));
+        if (XAxis) tran.Rotate(new Vector3(rotationSpeed * Time.deltaTime, 0, 0));
+        if (ZAxis) tran.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
+        if (YAxis) tran.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
     }
 }
