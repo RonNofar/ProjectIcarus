@@ -14,7 +14,7 @@ public class UFOCollision : MonoBehaviour {
     }
 
     void OnCollisionEnter (Collision col) {
-        Debug.Log("Entered OnCollisionEnter");
+        //Debug.Log("Entered OnCollisionEnter");
         if (col.transform.tag == "Obstacles") {
             PlayerDeath();
         }

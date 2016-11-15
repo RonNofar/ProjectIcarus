@@ -28,7 +28,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 m_Car.Jump(j);
             }
             if (b != 0) m_Car.Boost(b);
-            Debug.Log(m_Car.isGrounded());
+            //Debug.Log(m_Car.isGrounded());
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);

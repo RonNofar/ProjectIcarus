@@ -47,7 +47,11 @@
   <ItemGroup>
      <Compile Include="Assets\Assignment10.cs" />
      <Compile Include="Assets\ClockAnimator.cs" />
+     <Compile Include="Assets\FPSCounter.cs" />
+     <Compile Include="Assets\FPSDisplay.cs" />
      <Compile Include="Assets\Fractal.cs" />
+     <Compile Include="Assets\Nucleon.cs" />
+     <Compile Include="Assets\NucleonSpawner.cs" />
      <Compile Include="Assets\Other\PorglezompPyroclastics\ExplosionMat.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Other\Scripts\Enemy\EnemyHealth.cs" />
@@ -134,6 +138,7 @@
      <Compile Include="Assets\Scripts\SwingingDoor.cs" />
      <Compile Include="Assets\Scripts\UFOCollision.cs" />
      <Compile Include="Assets\Scripts\UFOContainerMovement.cs" />
+     <Compile Include="Assets\TurnCollider.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

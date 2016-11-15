@@ -37,6 +37,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_Downforce = 100f;
         [SerializeField] private SpeedType m_SpeedType;
         [SerializeField] private float m_Topspeed = 200;
+        [SerializeField] private float m_Botspeed = 15;
         [SerializeField] private static int NoOfGears = 5;
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
@@ -97,6 +98,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public void Jump(float jump) {
             if (isGrounded()) {
                 m_Rigidbody.AddForce(m_Transform.up * jumpForce, ForceMode.Impulse);
+                m_Rigidbody.AddForce(m_Transform.forward * m_Rigidbody.velocity.magnitude, ForceMode.Impulse);
             }
         }
 
@@ -183,7 +185,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
             SteerHelper();
             ApplyDrive(accel, footbrake);
-            CapSpeed();
+            CapMaxSpeed();
+            CapMinSpeed(accel);
 
             //Set the handbrake.
             //Assuming that wheels 2 and 3 are the rear wheels.
@@ -204,7 +207,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
 
-        private void CapSpeed()
+        private void CapMaxSpeed()
         {
             float speed = m_Rigidbody.velocity.magnitude;
             switch (m_SpeedType)
@@ -212,6 +215,8 @@ namespace UnityStandardAssets.Vehicles.Car
                 case SpeedType.MPH:
 
                     speed *= 2.23693629f;
+                    //Debug.Log(speed);
+
                     if (speed > m_Topspeed)
                         m_Rigidbody.velocity = (m_Topspeed/2.23693629f) * m_Rigidbody.velocity.normalized;
                     break;
@@ -221,6 +226,28 @@ namespace UnityStandardAssets.Vehicles.Car
                     if (speed > m_Topspeed)
                         m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
                     break;
+            }
+        }
+
+        private void CapMinSpeed(float accel) {
+            float speed = m_Rigidbody.velocity.magnitude;
+            if (accel == 0) {
+                switch (m_SpeedType) {
+                    case SpeedType.MPH:
+                        speed *= 2.23693629f;
+                        if (speed < m_Botspeed && speed > 0) {
+                            //m_CurrentTorque = -m_TractionControl * 10;
+                            AdjustTorque(m_SlipLimit);
+                        }
+                        break;
+                    case SpeedType.KPH:
+                        speed *= 3.6f;
+                        if (speed < m_Botspeed && speed > 0) {
+                            //m_CurrentTorque = -m_TractionControl * 10;
+                            AdjustTorque(m_SlipLimit);
+                        }
+                        break;
+                }
             }
         }
 
@@ -343,6 +370,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     for (int i = 0; i < 4; i++)
                     {
                         m_WheelColliders[i].GetGroundHit(out wheelHit);
+                        //Debug.Log("forwardSlip: " + wheelHit.forwardSlip);
 
                         AdjustTorque(wheelHit.forwardSlip);
                     }

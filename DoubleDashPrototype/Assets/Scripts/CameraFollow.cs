@@ -36,7 +36,8 @@ namespace HoverCar
 
                 // Smoothly interpolate between the camera's current position and it's target position.
                 // m_Transform.position = Vector3.Lerp(m_Transform.position, targetCamPos, smoothing * Time.deltaTime);
-                hoverController.RotateCamera()
+
+                //hoverController.RotateCamera();
             }
 
         }

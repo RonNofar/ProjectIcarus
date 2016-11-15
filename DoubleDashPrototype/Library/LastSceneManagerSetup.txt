@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/testCar.unity
+- path: Assets/testTwoPlayer.unity
   isLoaded: 1
   isActive: 1
