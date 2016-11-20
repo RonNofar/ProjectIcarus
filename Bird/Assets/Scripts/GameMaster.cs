@@ -13,6 +13,8 @@ public class GameMaster : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyUp(KeyCode.R)) Restart();
+        if (Input.GetKey(KeyCode.S)) Time.timeScale = 0.5f;
+        else Time.timeScale = 1f;
 	}
 
     void Restart () {

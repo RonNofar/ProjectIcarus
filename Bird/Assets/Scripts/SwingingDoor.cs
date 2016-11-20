@@ -5,7 +5,7 @@ public class SwingingDoor : MonoBehaviour {
 
     public GameObject swingingDoor;
     public float rotationSpeed = 1;
-    public float rotationFrames = 90;
+    public float rotationDegrees = 90;
     public bool XAxis = false;
     public bool YAxis = false;
     public bool ZAxis = false;
@@ -63,19 +63,25 @@ public class SwingingDoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    if (swingingDoor != null && isSwinging) {
+            float n_rotationSpeed = rotationSpeed * Time.deltaTime;
             Vector3 rotation = new Vector3(0,0,0);
             if (XAxis) {
-                rotation = new Vector3(rotationSpeed, 0, 0);
+                rotation = new Vector3(n_rotationSpeed, 0, 0);
             } else if (YAxis) {
-                rotation = new Vector3(0, rotationSpeed, 0);
+                rotation = new Vector3(0, n_rotationSpeed, 0);
             } else if (ZAxis) {
-                rotation = new Vector3(0, 0, rotationSpeed);
+                rotation = new Vector3(0, 0, n_rotationSpeed);
             } else Debug.Log("No axis selected.");
 
-            //Debug.Log(rotation);
-            ++totalRotationFrames;
-            if (totalRotationFrames < rotationFrames) doorTransform.Rotate(rotation * Time.deltaTime);
+            Debug.Log(rotation);
+
+
+            if (totalRotationFrames < rotationDegrees) doorTransform.Rotate(rotation);
             else isSwinging = false;
+
+            totalRotationFrames += Mathf.Abs(n_rotationSpeed);
+            //++totalRotationFrames;
+
             /*
             if (!isNegative) {
                 ++totalRotationFrames;

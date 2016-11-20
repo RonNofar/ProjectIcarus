@@ -400,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 0}
   rotationSpeed: 1
-  rotationFrames: 90
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 0
   ZAxis: 0
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 1026782140}
   rotationSpeed: 100
-  rotationFrames: 63
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 1
   ZAxis: 0
@@ -1550,7 +1550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &199253838
 Transform:
   m_ObjectHideFlags: 0
@@ -2836,7 +2836,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360454534}
-  m_LocalRotation: {x: -0.65328157, y: 0.27059788, z: 0.65328145, w: 0.270598}
+  m_LocalRotation: {x: -0.6532816, y: 0.2705979, z: 0.6532815, w: 0.27059802}
   m_LocalPosition: {x: 84.24, y: 19.35, z: 304.69}
   m_LocalScale: {x: 1.9874955, y: 6.305924, z: 12.933435}
   m_LocalEulerAnglesHint: {x: -45, y: -90, z: -180}
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 418369583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11fbfdcdce89b014e9142610ba538816, type: 3}
   m_Name: 
@@ -3733,7 +3733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 1928093744}
   rotationSpeed: 90
-  rotationFrames: 120
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 1
   ZAxis: 0
@@ -7815,7 +7815,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973829076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11fbfdcdce89b014e9142610ba538816, type: 3}
   m_Name: 
@@ -9270,6 +9270,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1242525221}
+  - 114: {fileID: 1242525222}
   m_Layer: 0
   m_Name: Warning light parent
   m_TagString: Untagged
@@ -9292,6 +9293,22 @@ Transform:
   - {fileID: 973829079}
   m_Father: {fileID: 226371201}
   m_RootOrder: 3
+--- !u!114 &1242525222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242525220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fbfdcdce89b014e9142610ba538816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToRotate: {fileID: 1242525220}
+  rotationSpeed: 5
+  XAxis: 1
+  ZAxis: 0
+  YAxis: 0
 --- !u!1 &1242790460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9902,7 +9919,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1318383203}
   m_LocalRotation: {x: 0.49999994, y: 0.5, z: -0.49999988, w: 0.5000002}
-  m_LocalPosition: {x: 75, y: 10.67, z: 302.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7076977, y: 0.98860943, z: 20.9075}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
   m_Children: []
@@ -10360,7 +10377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 859409067}
   rotationSpeed: 90
-  rotationFrames: 120
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 1
   ZAxis: 0
@@ -11109,7 +11126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 64169367}
   rotationSpeed: 90
-  rotationFrames: 120
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 1
   ZAxis: 0
@@ -11895,7 +11912,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1551824226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 75, y: 10.67, z: 302.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -11914,10 +11931,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fbfdcdce89b014e9142610ba538816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToRotate: {fileID: 1610772753}
-  rotationSpeed: 1
-  XAxis: 1
-  ZAxis: 0
+  objectToRotate: {fileID: 1551824226}
+  rotationSpeed: 50
+  XAxis: 0
+  ZAxis: 1
   YAxis: 0
 --- !u!114 &1551824229
 MonoBehaviour:
@@ -11925,13 +11942,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1551824226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11fbfdcdce89b014e9142610ba538816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToRotate: {fileID: 1318383203}
-  rotationSpeed: 1
+  rotationSpeed: 50
   XAxis: 1
   ZAxis: 0
   YAxis: 0
@@ -12337,7 +12354,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1610772753}
   m_LocalRotation: {x: 0, y: 0.70710665, z: 0, w: 0.70710695}
-  m_LocalPosition: {x: 75, y: 10.67, z: 302.65}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7076977, y: 0.98860943, z: 20.9075}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
@@ -13146,7 +13163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingingDoor: {fileID: 1813050331}
   rotationSpeed: 90
-  rotationFrames: 120
+  rotationDegrees: 90
   XAxis: 0
   YAxis: 1
   ZAxis: 0

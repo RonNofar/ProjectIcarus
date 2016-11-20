@@ -158,6 +158,7 @@
     <Compile Include="Assets\Scripts\Old\BirdPhysics.cs" />
     <Compile Include="Assets\Scripts\Old\UFOMovement.cs" />
     <Compile Include="Assets\Scripts\SwingingDoor.cs" />
+    <Compile Include="Assets\SwitchColor.cs" />
     <Compile Include="Assets\TurnCollider.cs" />
     <Compile Include="Assets\UFO\PlayerMaster.cs" />
     <Compile Include="Assets\UFO\RotateComponent.cs" />
