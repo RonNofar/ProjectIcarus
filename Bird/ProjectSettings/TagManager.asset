@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacles
   - Kill Zone
+  - Pick Up
   layers:
   - Default
   - TransparentFX

@@ -72,6 +72,8 @@
     <Compile Include="Assets\Assignment10.cs" />
     <Compile Include="Assets\Bezier\BezierCurve.cs" />
     <Compile Include="Assets\Bezier\BezierCurveInspector.cs" />
+    <Compile Include="Assets\Bezier\BezierSpline.cs" />
+    <Compile Include="Assets\Bezier\BezierSplineInspector.cs" />
     <Compile Include="Assets\Bezier\Line.cs" />
     <Compile Include="Assets\Bezier\LineInspector.cs" />
     <Compile Include="Assets\ClockAnimator.cs" />
