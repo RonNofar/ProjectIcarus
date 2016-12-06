@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TitleImageAnimator : MonoBehaviour {
 
     public Image titleImage;
+    public Image projectileImage;
 
     float r;
     float g;
@@ -19,6 +20,12 @@ public class TitleImageAnimator : MonoBehaviour {
 
     public float speed = 0.01f;
     public float scaleSpeed = 0.1f;
+    public float rotSpeed = 0.1f;
+    public float rotAngle = 1;
+
+    private float rotRadian;
+
+    
 
     // Use this for initialization
     void Awake () {
@@ -33,6 +40,8 @@ public class TitleImageAnimator : MonoBehaviour {
         Debug.Log("xScale: " + xScale + " | yScale: " + yScale + " | zScale: " + zScale);
 
         orgRot = titleImage.transform.localRotation;
+
+        rotRadian = rotAngle / 180;
     }
 	
 	// Update is called once per frame
@@ -66,13 +75,13 @@ public class TitleImageAnimator : MonoBehaviour {
             (Mathf.Sin(Time.timeSinceLevelLoad * scaleSpeed) + 4f)/4f,//(Mathf.Sin(Mathf.PingPong(Time.timeSinceLevelLoad, pi * 2)) + 2f)/2,
             zScale);
         Debug.Log(Time.time+" | "+titleImage.transform.localScale);
-        /*
+        
         titleImage.transform.localRotation = new Quaternion(
-            Mathf.Sin(Mathf.PingPong(Time.time, pi * 2)),
-            Mathf.Sin(Mathf.PingPong(Time.time, pi * 2)),
-            orgRot.z,
+            orgRot.x,// * rotAngle,
+            orgRot.y,//Mathf.Sin(Mathf.PingPong(Time.time, pi * 2)),
+            Mathf.Sin(Time.timeSinceLevelLoad * rotSpeed) * 0.1f,
             orgRot.w
-            );*/
+            );
         //titleImage.transform.localScale = new Vector2()
     }
      /*
@@ -85,4 +94,7 @@ public class TitleImageAnimator : MonoBehaviour {
         } else if (t)
         return result;
     }*/
+
+    
+
 }

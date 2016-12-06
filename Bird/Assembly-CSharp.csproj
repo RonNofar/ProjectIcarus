@@ -139,7 +139,9 @@
      <Compile Include="Assets\Scripts\Old\BirdMovement3.cs" />
      <Compile Include="Assets\Scripts\Old\BirdPhysics.cs" />
      <Compile Include="Assets\Scripts\Old\UFOMovement.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\SwingingDoor.cs" />
+     <Compile Include="Assets\StartButton.cs" />
      <Compile Include="Assets\Stuff\ObjectPool.cs" />
      <Compile Include="Assets\Stuff\PooledObject.cs" />
      <Compile Include="Assets\Stuff\SceneSwitcher.cs" />
@@ -147,6 +149,7 @@
      <Compile Include="Assets\Stuff\StuffSpawner.cs" />
      <Compile Include="Assets\Stuff\StuffSpawnerRing.cs" />
      <Compile Include="Assets\SwitchColor.cs" />
+     <Compile Include="Assets\TitleImageAnimator.cs" />
      <Compile Include="Assets\TurnCollider.cs" />
      <Compile Include="Assets\UFO\PlayerMaster.cs" />
      <Compile Include="Assets\UFO\RotateComponent.cs" />
