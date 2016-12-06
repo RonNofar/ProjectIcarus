@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
-    static public bool isMovementStarted = false;
     static public bool isGameStarted = false;
     static public bool isGamePaused = false;
+    static public bool isGameOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,14 +18,14 @@ public class GameMaster : MonoBehaviour {
         if (Input.GetKey(KeyCode.S)) Time.timeScale = 0.5f;
         else Time.timeScale = 1f;
 
-        if (Input.GetKeyUp(KeyCode.P)) PlayerMaster.score += Random.Range(1, 100);
-        if (Input.GetKeyUp(KeyCode.O)) PlayerMaster.score -= Random.Range(1, 100);
+        if (Input.GetKeyUp(KeyCode.P)) UFOController.score += Random.Range(1, 100);
+        if (Input.GetKeyUp(KeyCode.O)) UFOController.score -= Random.Range(1, 100);
     }
 
     void Restart () {
         SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
-        isMovementStarted = false;
-        PlayerMaster.isPlayerDead = false;
+        UFOController.isMovementStarted = false;
+        UFOController.isPlayerDead = false;
     }
 
     public GameObject[] FindObjectsWithTag ( string tag ) {

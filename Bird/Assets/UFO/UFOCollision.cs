@@ -4,29 +4,13 @@ using System.Collections;
 
 public class UFOCollision : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	    
-	}
+    private UFOController parentController;
 
-    void SetInitialReferences () {
-
+    void Awake () {
+        parentController = GetComponentInParent<UFOController>();
     }
 
     void OnCollisionEnter (Collision col) {
-        //Debug.Log("Entered OnCollisionEnter");
-        if (col.transform.tag == "Obstacles") {
-            PlayerDeath();
-        }
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void PlayerDeath () {
-        PlayerMaster.isPlayerDead = true;
-        Debug.Log("PlayerDeath: isPlayerDead = " + PlayerMaster.isPlayerDead);
+        parentController.OnEnterChildCollision(col);
     }
 }

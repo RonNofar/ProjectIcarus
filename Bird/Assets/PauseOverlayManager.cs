@@ -61,7 +61,7 @@ public class PauseOverlayManager : MonoBehaviour {
         }
         else {
             panel1.SetActive(false);
-            if (GameMaster.isMovementStarted) { // turn on In-Game overlay
+            if (UFOController.isMovementStarted) { // turn on In-Game overlay
                 panel4.SetActive(true);
                 Panel4();
             } else {
@@ -72,7 +72,7 @@ public class PauseOverlayManager : MonoBehaviour {
             } else {
                 panel3.SetActive(false);
             }
-            if (PlayerMaster.isPlayerDead) { // turn on death sceen
+            if (GameMaster.isGameOver) { // turn on death sceen
                 panel2.SetActive(true);
                 Panel2();
             } else {
@@ -115,10 +115,10 @@ public class PauseOverlayManager : MonoBehaviour {
     }
 
     void Text4() {
-        PlayerMaster.FixNegativeScore();
-        int size = Mathf.Clamp(PlayerMaster.score.ToString().Length, 0,6);
+        //UFOController.FixNegativeScore();
+        int size = Mathf.Clamp(UFOController.score.ToString().Length, 0,6);
         //Debug.Log("size: " + size);
-        if (size < 5) txt4.text = zeros4[size - 1] + PlayerMaster.score.ToString();
+        if (size < 5) txt4.text = zeros4[size - 1] + UFOController.score.ToString();
         else if (size >= 5) txt4.text = zeros4[size - 1];
 
         if (size > prvSize) {
@@ -135,11 +135,6 @@ public class PauseOverlayManager : MonoBehaviour {
             txt4.color = Color.Lerp(color_txt4[0], color_txt4[1], temp4);
             if (count4 > size) count4 = -1;
         }
-    }
-
-    IEnumerator FlashEffect4 () {
-
-        yield return new WaitForEndOfFrame();
     }
     #endregion
     
