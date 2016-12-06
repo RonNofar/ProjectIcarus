@@ -37,10 +37,10 @@ public class UFOContainerMovement : MonoBehaviour {
 
             // Game starting
             if (initializingMovement < initializingThreshold) initializingMovement += Mathf.Abs(rotation);
-            else GameMaster.isGameStarted = true;
+            else GameMaster.isMovementStarted = true;
 
             // Acceleration
-            if (GameMaster.isGameStarted) {
+            if (GameMaster.isMovementStarted && GameMaster.isGameStarted) {
                 // Acceleration
                 float MouseY = Input.GetAxis("Mouse Y");
                 accelerationCap = movementSpeed / 2;

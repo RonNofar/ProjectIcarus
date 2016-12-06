@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMaster : MonoBehaviour {
 
     static public bool isPlayerDead = false;
+    static public int score = 0;
 
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private GameObject UFOObject;
@@ -31,6 +32,7 @@ public class PlayerMaster : MonoBehaviour {
 	void Update () {
         if (isPlayerDead) Explosion(UFOTransform);
         //if (UFOTransform != null) Debug.Log(UFOTransform.) RIGIDBODY
+        if (GameMaster.isMovementStarted) FixNegativeScore();
     }
 
     void Explosion (Transform tranLocation) { // handle through a gamemaster NOT playermaster (player master is destoryed before the rest of the code can execute
@@ -46,5 +48,9 @@ public class PlayerMaster : MonoBehaviour {
 
     public GameObject findGameObjectOfName (string name) {
         return GameObject.Find("MisterMaster");
+    }
+
+    static public void FixNegativeScore () {
+        if (score < 0) score = 0;
     }
 }

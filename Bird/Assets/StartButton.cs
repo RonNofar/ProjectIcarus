@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour {
 
@@ -15,6 +17,8 @@ public class StartButton : MonoBehaviour {
         }
     }
 
+    public Button btn;
+
     public FloatRange spawnRange, velocityRange, directionRange;
 
     float spawnTime;
@@ -22,14 +26,26 @@ public class StartButton : MonoBehaviour {
     // Use this for initialization
     void Start () {
         spawnTime = Time.time + spawnRange.RandomInRange;
+
+        if (btn != null) btn = btn.GetComponent<Button>();
+        else Debug.Log("No Button Object attached!");
+
+        btn.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
     void Update () {
+        /*
         if (Time.time > spawnTime) {
             CreateProjectile(velocityRange.RandomInRange, directionRange.RandomInRange);
-        }
+        }*/
+        
 	}
+
+    void TaskOnClick() {
+        Debug.Log("Clicked");
+        SceneManager.LoadScene("UFOLevelTest", LoadSceneMode.Single);
+    }
 
     void OnPointerEnter () {
         

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Bezier\LineInspector.cs" />
     <Compile Include="Assets\ClockAnimator.cs" />
     <Compile Include="Assets\Fractal.cs" />
+    <Compile Include="Assets\MouseImageAnimator.cs" />
     <Compile Include="Assets\Nucleon.cs" />
     <Compile Include="Assets\NucleonSpawner.cs" />
     <Compile Include="Assets\Other\PorglezompPyroclastics\ExplosionMat.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
+    <Compile Include="Assets\PauseOverlayManager.cs" />
     <Compile Include="Assets\Prefabs\FPS Counter\FPSCounter.cs" />
     <Compile Include="Assets\Prefabs\FPS Counter\FPSDisplay.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -157,7 +159,9 @@
     <Compile Include="Assets\Scripts\Old\BirdMovement3.cs" />
     <Compile Include="Assets\Scripts\Old\BirdPhysics.cs" />
     <Compile Include="Assets\Scripts\Old\UFOMovement.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\SwingingDoor.cs" />
+    <Compile Include="Assets\StartButton.cs" />
     <Compile Include="Assets\Stuff\ObjectPool.cs" />
     <Compile Include="Assets\Stuff\PooledObject.cs" />
     <Compile Include="Assets\Stuff\SceneSwitcher.cs" />

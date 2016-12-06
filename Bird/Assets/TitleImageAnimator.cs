@@ -32,12 +32,12 @@ public class TitleImageAnimator : MonoBehaviour {
         r = 1;
         g = 0;
         b = 0;
-        Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
+        //Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
 
         xScale = titleImage.transform.localScale.x;
         yScale = titleImage.transform.localScale.y;
         zScale = titleImage.transform.localScale.z;
-        Debug.Log("xScale: " + xScale + " | yScale: " + yScale + " | zScale: " + zScale);
+        //Debug.Log("xScale: " + xScale + " | yScale: " + yScale + " | zScale: " + zScale);
 
         orgRot = titleImage.transform.localRotation;
 
@@ -69,12 +69,12 @@ public class TitleImageAnimator : MonoBehaviour {
         titleImage.color = new Color(r, g, b);
 
         
-        float pi = Mathf.PI;
+        //float pi = Mathf.PI;
         titleImage.transform.localScale = new Vector3(
             (Mathf.Sin(Time.timeSinceLevelLoad * scaleSpeed) + 4f)/4f,//(Mathf.Sin(Mathf.PingPong(Time.timeSinceLevelLoad, pi * 2)) + 2f)/2,
             (Mathf.Sin(Time.timeSinceLevelLoad * scaleSpeed) + 4f)/4f,//(Mathf.Sin(Mathf.PingPong(Time.timeSinceLevelLoad, pi * 2)) + 2f)/2,
             zScale);
-        Debug.Log(Time.time+" | "+titleImage.transform.localScale);
+        //Debug.Log(Time.time+" | "+titleImage.transform.localScale);
         
         titleImage.transform.localRotation = new Quaternion(
             orgRot.x,// * rotAngle,
