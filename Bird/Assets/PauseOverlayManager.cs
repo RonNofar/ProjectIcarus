@@ -15,6 +15,7 @@ public class PauseOverlayManager : MonoBehaviour {
     // UI elements of Death Panel
     public GameObject panel2;
     public Text txt2;
+    public Text txt2_1;
     public Button btn2, btn2_1;
     public Color[] color_panel2 = { new Color(0.8627f, 0.0784f, 0.0784f), new Color(0.9019f, 0.1176f, 0.1176f) };
 
@@ -136,17 +137,19 @@ public class PauseOverlayManager : MonoBehaviour {
         image_panel2.color = Color.Lerp(color_panel2[0], color_panel2[1], (Mathf.Sin(Time.time) * flashSpeed2 + 1)/2);
     }
 
-    void Text2() { // score
+    void Text2 () { // score
         txt2.text = txt2_original + UFOController.score.ToString();
     }
 
     void Button2 () { // Restart Game
+        txt2_1.transform.SetParent(panel2.transform);
         GameMaster.Restart();
     }
 
     void Button2_1 () { // Exit to Main Menu
+        txt2_1.transform.SetParent(panel2.transform);
         GameMaster.ReinitializeReferences();
-        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("mainMenu", LoadSceneMode.Single);
     }
 
     #endregion
@@ -192,11 +195,13 @@ public class PauseOverlayManager : MonoBehaviour {
         txt5.text = txt5_original + UFOController.score.ToString();
     }
     void Button5 () {
+        txt2_1.transform.SetParent(panel2.transform);
         GameMaster.Restart();
     }
     void Button5_1 () {
+        txt2_1.transform.SetParent(panel2.transform);
         GameMaster.ReinitializeReferences();
-        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("mainMenu", LoadSceneMode.Single);
     }
     #endregion
 

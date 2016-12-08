@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleImage: {fileID: 328353645}
   projectileImage: {fileID: 0}
-  speed: 0.01
+  speed: 1
   scaleSpeed: 5
   rotSpeed: 1
   rotAngle: 35

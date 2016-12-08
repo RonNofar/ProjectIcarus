@@ -36,7 +36,7 @@ public class GameMaster : MonoBehaviour {
 
     static public void Restart () {
         ReinitializeReferences();
-        SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadSceneAsync("UFOLevelTest", LoadSceneMode.Single);//Application.LoadLevel(Application.loadedLevel);
     }
 
     public GameObject[] FindObjectsWithTag ( string tag ) {

@@ -18,7 +18,7 @@ public class TitleImageAnimator : MonoBehaviour {
 
     Quaternion orgRot;
 
-    public float speed = 0.01f;
+    public float speed = 1;
     public float scaleSpeed = 0.1f;
     public float rotSpeed = 0.1f;
     public float rotAngle = 1;
@@ -46,23 +46,24 @@ public class TitleImageAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        float n_speed = speed * Time.deltaTime;
         if (r >= 1 && g < 1 && b <= 0) {
-            r = 1;    g += speed; b = 0;
+            r = 1;    g += n_speed; b = 0;
         }
         else if (r > 0 && g >= 1 && b <= 0) {
-            r -= speed; g = 1;    b = 0;
+            r -= n_speed; g = 1;    b = 0;
         }
         else if (r <= 0 && g >= 1 && b < 1) {
-            r = 0;      g = 1;    b += speed;
+            r = 0;      g = 1;    b += n_speed;
         }
         else if (r <= 0 && g > 0 && b >= 1) {
-            r = 0;      g -= speed; b = 1;
+            r = 0;      g -= n_speed; b = 1;
         }
         else if (r < 1 && g <= 0 && b >= 1) {
-            r += speed; g = 0;      b = 1;
+            r += n_speed; g = 0;      b = 1;
         }
         else if (r >= 1 && g <= 0 && b > 0) {
-            r = 1;    g = 0;      b -= speed;
+            r = 1;    g = 0;      b -= n_speed;
         }
         else Debug.Log("Something went wrong in RGB flow!");
         //Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
