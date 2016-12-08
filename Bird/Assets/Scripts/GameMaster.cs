@@ -7,10 +7,13 @@ public class GameMaster : MonoBehaviour {
     static public bool isGameStarted = false;
     static public bool isGamePaused = false;
     static public bool isGameOver = false;
+    static public bool isGameWon = false;
 
 	// Use this for initialization
 	void Start () {
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,10 +25,18 @@ public class GameMaster : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.O)) UFOController.score -= Random.Range(1, 100);
     }
 
-    void Restart () {
-        SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
+    static public void ReinitializeReferences() {
+        isGameStarted = false;
+        isGamePaused = false;
+        isGameOver = false;
         UFOController.isMovementStarted = false;
         UFOController.isPlayerDead = false;
+        UFOController.isVisible = true;
+    }
+
+    static public void Restart () {
+        ReinitializeReferences();
+        SceneManager.LoadScene("UFOLevelTest");//Application.LoadLevel(Application.loadedLevel);
     }
 
     public GameObject[] FindObjectsWithTag ( string tag ) {

@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22457448}
   - 222: {fileID: 22252258}
   - 114: {fileID: 11474644}
+  - 114: {fileID: 11472366}
   m_Layer: 5
   m_Name: Projectile
   m_TagString: Untagged
@@ -17,6 +18,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11472366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9494aa98d11dd4da996aced39fa6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity:
+    min: 50
+    max: 100
+  direction:
+    min: 0
+    max: 360
 --- !u!114 &11474644
 MonoBehaviour:
   m_ObjectHideFlags: 1

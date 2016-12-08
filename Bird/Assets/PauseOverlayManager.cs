@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseOverlayManager : MonoBehaviour {
 
@@ -13,12 +14,16 @@ public class PauseOverlayManager : MonoBehaviour {
 
     // UI elements of Death Panel
     public GameObject panel2;
+    public Text txt2;
+    public Button btn2, btn2_1;
     public Color[] color_panel2 = { new Color(0.8627f, 0.0784f, 0.0784f), new Color(0.9019f, 0.1176f, 0.1176f) };
 
     public float flashSpeed2 = 8;
 
     private Image image_panel2;
     private float startTime2 = 0;
+
+    private string txt2_original;
 
     // UI elements of Pause Panel
     public GameObject panel3;
@@ -37,6 +42,15 @@ public class PauseOverlayManager : MonoBehaviour {
     private int count4 = -1; // used to store amounts of current flashes
     private float startTime4 = 0;
 
+    // UI elements of Win Panel
+    public GameObject panel5;
+    public Button btn5;
+    public Button btn5_1;
+    public Text txt5;
+    public Color[] color_panel5 = { Color.green, Color.yellow };
+
+    private Image image_panel5;
+    private string txt5_original;
 
     void Start () {
         SetInitialReferences();
@@ -47,8 +61,12 @@ public class PauseOverlayManager : MonoBehaviour {
         img1_Position = img1.transform.localPosition;
 
         image_panel2 = panel2.GetComponent<Image>();
+        txt2_original = txt2.text;
 
         txt4 = txt4.GetComponent<Text>();
+
+        image_panel5 = panel5.GetComponent<Image>();
+        txt5_original = txt5.text;
     }
 	
 	void Update () {
@@ -57,6 +75,7 @@ public class PauseOverlayManager : MonoBehaviour {
             panel2.SetActive(false);
             panel3.SetActive(false);
             panel4.SetActive(false);
+            panel5.SetActive(false);
             Panel1();
         }
         else {
@@ -77,6 +96,12 @@ public class PauseOverlayManager : MonoBehaviour {
                 Panel2();
             } else {
                 panel2.SetActive(false);
+            }
+            if (GameMaster.isGameWon) {
+                panel5.SetActive(true);
+                Panel5();
+            } else {
+                panel5.SetActive(false);
             }
         }
 	}
@@ -101,11 +126,27 @@ public class PauseOverlayManager : MonoBehaviour {
     #endregion
     #region Death Panel - 2
     void Panel2 () {
+        btn2.onClick.AddListener(Button2);
+        btn2_1.onClick.AddListener(Button2_1);
         PanelImage2();
+        Text2();
     }
 
     void PanelImage2 () {
         image_panel2.color = Color.Lerp(color_panel2[0], color_panel2[1], (Mathf.Sin(Time.time) * flashSpeed2 + 1)/2);
+    }
+
+    void Text2() { // score
+        txt2.text = txt2_original + UFOController.score.ToString();
+    }
+
+    void Button2 () { // Restart Game
+        GameMaster.Restart();
+    }
+
+    void Button2_1 () { // Exit to Main Menu
+        GameMaster.ReinitializeReferences();
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
     #endregion
@@ -137,5 +178,26 @@ public class PauseOverlayManager : MonoBehaviour {
         }
     }
     #endregion
-    
+    #region Win Panel - 5
+    void Panel5 () {
+        btn5.onClick.AddListener(Button5);
+        btn5_1.onClick.AddListener(Button5_1);
+        PanelImage5();
+        Text5();
+    }
+    void PanelImage5 () {
+        image_panel5.color = Color.Lerp(color_panel5[0], color_panel5[1], (Mathf.Sin(Time.time) * flashSpeed2 + 1) / 2);
+    }
+    void Text5 () {
+        txt5.text = txt5_original + UFOController.score.ToString();
+    }
+    void Button5 () {
+        GameMaster.Restart();
+    }
+    void Button5_1 () {
+        GameMaster.ReinitializeReferences();
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
+    }
+    #endregion
+
 }

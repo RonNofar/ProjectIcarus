@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Assignment10.cs" />
     <Compile Include="Assets\Bezier\BezierCurve.cs" />
     <Compile Include="Assets\Bezier\BezierCurveInspector.cs" />
     <Compile Include="Assets\Bezier\BezierSpline.cs" />
@@ -145,8 +144,10 @@
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Other\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\PauseOverlayManager.cs" />
+    <Compile Include="Assets\PointScript.cs" />
     <Compile Include="Assets\Prefabs\FPS Counter\FPSCounter.cs" />
     <Compile Include="Assets\Prefabs\FPS Counter\FPSDisplay.cs" />
+    <Compile Include="Assets\ProjectileScript.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
     <Compile Include="Assets\Scripts\LaserControl.cs" />
@@ -171,10 +172,13 @@
     <Compile Include="Assets\SwitchColor.cs" />
     <Compile Include="Assets\TitleImageAnimator.cs" />
     <Compile Include="Assets\TurnCollider.cs" />
-    <Compile Include="Assets\UFO\PlayerMaster.cs" />
-    <Compile Include="Assets\UFO\RotateComponent.cs" />
+    <Compile Include="Assets\UFO\Old\PlayerMaster.cs" />
+    <Compile Include="Assets\UFO\Old\RotateComponent.cs" />
+    <Compile Include="Assets\UFO\Old\UFOContainerMovement.cs" />
     <Compile Include="Assets\UFO\UFOCollision.cs" />
-    <Compile Include="Assets\UFO\UFOContainerMovement.cs" />
+    <Compile Include="Assets\UFO\UFOController.cs" />
+    <Compile Include="Assets\UFO\UFOUserController.cs" />
+    <Compile Include="Assets\WinCube.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Other\Fonts\LuckiestGuy\LICENSE.txt" />

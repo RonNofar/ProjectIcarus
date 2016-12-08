@@ -3,6 +3,23 @@ using System.Collections;
 
 public class UFOController : MonoBehaviour {
 
+    #region Structs
+    [System.Serializable]
+    public struct FloatRange
+    {
+        public float min, max;
+
+        public float RandomInRange
+        {
+            get
+            {
+                return Random.Range(min, max);
+            }
+        }
+    }
+    #endregion
+
+    #region Variables
     [Header("Global Variables")]
     static public bool isPlayerDead = false;
     static public bool isMovementStarted = false;
@@ -31,8 +48,11 @@ public class UFOController : MonoBehaviour {
 
     [Header("Other")]
     public GameObject UFO;
+    public FloatRange scoreRange;
     private Transform m_Transform;
+    #endregion
 
+    #region Functions
     private void Start () {
         SetInitialReferences();
     }
@@ -47,11 +67,6 @@ public class UFOController : MonoBehaviour {
 	private void Update () {
 	
 	}
-
-    private void OnCollisionEnter ( Collision col ) {
-        //Debug.Log("Entered OnCollisionEnter");
-        
-    }
 
     public void Move (float rot, float accel) {
         if (!isPlayerDead) {
@@ -118,11 +133,15 @@ public class UFOController : MonoBehaviour {
         else UFO.GetComponent<MeshRenderer>().enabled = false;
     }
 
-    public void OnEnterChildCollision ( Collision col ) {
+    public void OnEnterChildCollision ( Collision col ) { // Called in UFOCollision
         if (col.transform.tag == "Obstacles") {
             Death();
         }
     }
 
+    public void AddScore() {
+        score += (int)scoreRange.RandomInRange;
+    }
+    #endregion
 
 }
