@@ -29,6 +29,7 @@ public class GameMaster : MonoBehaviour {
         isGameStarted = false;
         isGamePaused = false;
         isGameOver = false;
+        isGameWon = false;
         UFOController.isMovementStarted = false;
         UFOController.isPlayerDead = false;
         UFOController.isVisible = true;
