@@ -142,14 +142,17 @@ public class PauseOverlayManager : MonoBehaviour {
     }
 
     void Button2 () { // Restart Game
-        txt2_1.transform.SetParent(panel2.transform);
-        GameMaster.Restart();
+        //txt2_1.transform.SetParent(panel2.transform);
+        //GameMaster.Restart();
+        btn2.onClick.RemoveAllListeners();
+        GameMaster.isRestart = true;
     }
 
     void Button2_1 () { // Exit to Main Menu
-        txt2_1.transform.SetParent(panel2.transform);
+        //txt2_1.transform.SetParent(panel2.transform);
+        btn2_1.onClick.RemoveAllListeners();
         GameMaster.ReinitializeReferences();
-        SceneManager.LoadSceneAsync("mainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
     #endregion
@@ -195,13 +198,16 @@ public class PauseOverlayManager : MonoBehaviour {
         txt5.text = txt5_original + UFOController.score.ToString();
     }
     void Button5 () {
-        txt2_1.transform.SetParent(panel2.transform);
-        GameMaster.Restart();
+        //txt2_1.transform.SetParent(panel2.transform);
+        //GameMaster.Restart();
+        btn5.onClick.RemoveAllListeners();
+        GameMaster.isRestart = true;
     }
     void Button5_1 () {
-        txt2_1.transform.SetParent(panel2.transform);
+        //txt2_1.transform.SetParent(panel2.transform);
+        btn5_1.onClick.RemoveAllListeners();
         GameMaster.ReinitializeReferences();
-        SceneManager.LoadSceneAsync("mainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
     #endregion
 

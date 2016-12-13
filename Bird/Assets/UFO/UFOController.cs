@@ -53,11 +53,16 @@ public class UFOController : MonoBehaviour {
     #endregion
 
     #region Functions
-    private void Start () {
+    private void Awake () {
         SetInitialReferences();
     }
 
     private void SetInitialReferences () {
+        isMovementStarted = false;
+        isPlayerDead = false;
+        isVisible = true;
+        score = 0;
+
         m_Transform = gameObject.GetComponent<Transform>();
         rotTransform = UFOContainer.GetComponent<Transform>();
         accelerationCap = movementSpeed / 2;
