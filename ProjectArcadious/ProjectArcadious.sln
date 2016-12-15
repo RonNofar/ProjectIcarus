@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{E4AA85B3-6AD0-92D0-7638-83B571887B61}") = "ProjectArcadious", "Assembly-CSharp-firstpass.csproj", "{F3C7F571-4C74-2643-A63D-0EBCC224CC6F}"
+EndProject
+Project("{E4AA85B3-6AD0-92D0-7638-83B571887B61}") = "ProjectArcadious", "Assembly-CSharp-Editor.csproj", "{EA2C636A-D19F-FAD1-50EB-E2550B80D4E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3C7F571-4C74-2643-A63D-0EBCC224CC6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C7F571-4C74-2643-A63D-0EBCC224CC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C7F571-4C74-2643-A63D-0EBCC224CC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C7F571-4C74-2643-A63D-0EBCC224CC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2C636A-D19F-FAD1-50EB-E2550B80D4E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2C636A-D19F-FAD1-50EB-E2550B80D4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2C636A-D19F-FAD1-50EB-E2550B80D4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2C636A-D19F-FAD1-50EB-E2550B80D4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
