@@ -186,10 +186,10 @@ public class PauseOverlayManager : MonoBehaviour {
     #endregion
     #region Win Panel - 5
     void Panel5 () {
-        btn5.onClick.AddListener(Button5);
-        btn5_1.onClick.AddListener(Button5_1);
         PanelImage5();
         Text5();
+        btn5.onClick.AddListener(Button5);
+        btn5_1.onClick.AddListener(Button5_1);
     }
     void PanelImage5 () {
         image_panel5.color = Color.Lerp(color_panel5[0], color_panel5[1], (Mathf.Sin(Time.time) * flashSpeed2 + 1) / 2);

@@ -66,7 +66,7 @@ public class TitleImageAnimator : MonoBehaviour {
             r = 1;    g = 0;      b -= n_speed;
         }
         else Debug.Log("Something went wrong in RGB flow!");
-        Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
+        //Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
         titleImage.color = new Color(r, g, b);
 
         

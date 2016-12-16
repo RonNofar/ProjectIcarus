@@ -31,10 +31,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity:
     min: 50
-    max: 100
+    max: 300
   direction:
     min: 0
     max: 360
+  rotation:
+    min: 5
+    max: 25
 --- !u!114 &11474644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +57,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c03eb29039473da4fbb5cb9b9732d11d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
