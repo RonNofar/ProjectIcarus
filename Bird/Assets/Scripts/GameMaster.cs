@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
-    static public bool isGameStarted = false;
-    static public bool isGamePaused = false;
-    static public bool isGameOver = false;
-    static public bool isGameWon = false;
+    static public bool isGameStarted = false;   // triggered by start panel exit
+    static public bool isGamePaused = false;    // triggered by pause
+    static public bool isGameOver = false;      // triggered by player death
+    static public bool isGameWon = false;       // triggered by win condition
 
     static public bool isRestart = false;
 
