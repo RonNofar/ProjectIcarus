@@ -22,6 +22,7 @@ public class TitleImageAnimator : MonoBehaviour {
     public float scaleSpeed = 0.1f;
     public float rotSpeed = 0.1f;
     public float rotAngle = 1;
+    public float spawnTick = 0.1f;
 
     private float rotRadian;
 
@@ -46,30 +47,9 @@ public class TitleImageAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float n_speed = speed * Time.deltaTime;
-        if (r >= 1 && g < 1 && b <= 0) {
-            r = 1;    g += n_speed; b = 0;
-        }
-        else if (r > 0 && g >= 1 && b <= 0) {
-            r -= n_speed; g = 1;    b = 0;
-        }
-        else if (r <= 0 && g >= 1 && b < 1) {
-            r = 0;      g = 1;    b += n_speed;
-        }
-        else if (r <= 0 && g > 0 && b >= 1) {
-            r = 0;      g -= n_speed; b = 1;
-        }
-        else if (r < 1 && g <= 0 && b >= 1) {
-            r += n_speed; g = 0;      b = 1;
-        }
-        else if (r >= 1 && g <= 0 && b > 0) {
-            r = 1;    g = 0;      b -= n_speed;
-        }
-        else Debug.Log("Something went wrong in RGB flow!");
-        //Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
-        titleImage.color = new Color(r, g, b);
+        RGB();
 
-        
+
         //float pi = Mathf.PI;
         titleImage.transform.localScale = new Vector3(
             (Mathf.Sin(Time.timeSinceLevelLoad * scaleSpeed) + 4f)/4f,//(Mathf.Sin(Mathf.PingPong(Time.timeSinceLevelLoad, pi * 2)) + 2f)/2,
@@ -97,5 +77,28 @@ public class TitleImageAnimator : MonoBehaviour {
     }*/
 
     
-
+    private void RGB () {
+        float n_speed = speed * Time.deltaTime;
+        if (r >= 1 && g < 1 && b <= 0) {
+            r = 1; g += n_speed; b = 0;
+        }
+        else if (r > 0 && g >= 1 && b <= 0) {
+            r -= n_speed; g = 1; b = 0;
+        }
+        else if (r <= 0 && g >= 1 && b < 1) {
+            r = 0; g = 1; b += n_speed;
+        }
+        else if (r <= 0 && g > 0 && b >= 1) {
+            r = 0; g -= n_speed; b = 1;
+        }
+        else if (r < 1 && g <= 0 && b >= 1) {
+            r += n_speed; g = 0; b = 1;
+        }
+        else if (r >= 1 && g <= 0 && b > 0) {
+            r = 1; g = 0; b -= n_speed;
+        }
+        else Debug.Log("Something went wrong in RGB flow!");
+        //Debug.Log("r: " + r + " | g: " + g + " | b: " + b);
+        titleImage.color = new Color(r, g, b);
+    }
 }

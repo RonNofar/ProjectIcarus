@@ -45,7 +45,7 @@ public class GameMaster : MonoBehaviour {
 
     static public void Restart () {
         //ReinitializeReferences();
-        SceneManager.LoadSceneAsync("UFOLevelTest", LoadSceneMode.Single);//Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene("UFOLevelTest", LoadSceneMode.Single);//Application.LoadLevel(Application.loadedLevel);
     }
 
     static public void LoadMainMenu() {
